@@ -209,22 +209,22 @@ Request a free demo today.
 
 <div class="form-group">
 <label>Full Name</label>
-<input type="text" class="form-control" placeholder="Enter your full name">
+<input type="text" id ="full-name"    class="form-control" placeholder="Enter your full name">
 </div>
 
 <div class="form-group">
 <label>Business Email</label>
-<input type="email" class="form-control" placeholder="Enter your business email">
+<input type="email" id="business-email" class="form-control" placeholder="Enter your business email">
 </div>
 
 <div class="form-group">
 <label>Company Name</label>
-<input type="text" class="form-control" placeholder="Enter your company name">
+<input type="text" id="company-name" class="form-control" placeholder="Enter your company name">
 </div>
 
 <div class="form-group">
 <label>Company Size</label>
-<select class="form-control">
+<select id="company-size" class="form-control">
 <option>1 - 10 Employees</option>
 <option>11 - 50 Employees</option>
 <option>51 - 200 Employees</option>
@@ -235,16 +235,16 @@ Request a free demo today.
 
 <div class="form-group">
 <label>Phone Number</label>
-<input type="text" class="form-control" placeholder="Enter your phone number">
+<input type="text" id="phone-number" class="form-control" placeholder="Enter your phone number">
 </div>
 
 <div class="form-group">
 <label>Message</label>
-<textarea class="form-control" rows="5" placeholder="Tell us about your HR needs"></textarea>
+<textarea id="message" class="form-control" rows="5" placeholder="Tell us about your HR needs"></textarea>
 </div>
 
 <div class="text-center">
-<button type="submit" class="btn btn-primary">
+<button type="submit" id="button" class="btn btn-primary">
 Request Demo
 </button>
 </div>
@@ -259,6 +259,12 @@ Request Demo
 </section>
 
 </main>
+
+
+
+
+
+
 
 	
 	<!-- Start main content -->
@@ -1093,6 +1099,84 @@ Request Demo
 	    });
 
 	</script>
+
+
+    <script>
+     // 1. GET ELEMENTS
+let fullNameInput = document.getElementById("full-name");
+let emailInput = document.getElementById("business-email");
+let companyNameInput = document.getElementById("company-name");
+let companySizeInput = document.getElementById("company-size");
+let phoneInput = document.getElementById("phone-number");
+let messageInput = document.getElementById("message");
+let submitBtn = document.getElementById("button");
+
+// 2. CLICK EVENT
+submitBtn.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    // 3. GET VALUES
+    let fullNameValue = fullNameInput.value.trim();
+    let emailValue = emailInput.value.trim();
+    let companyNameValue = companyNameInput.value.trim();
+    let companySizeValue = companySizeInput.value;
+    let phoneValue = phoneInput.value.trim();
+    let messageValue = messageInput.value.trim();
+
+    // 4. VALIDATION FLAG
+    let isValid = true;
+
+    // 5. CLEAR OLD ERRORS (optional but good practice)
+    // (you can add error divs later if you want)
+
+    // 6. VALIDATION RULES
+    if (fullNameValue === "") {
+        alert("Full name is required");
+        isValid = false;
+    }
+
+    if (emailValue === "") {
+        alert("Email is required");
+        isValid = false;
+    }
+
+    if (companyNameValue === "") {
+        alert("Company name is required");
+        isValid = false;
+    }
+
+    if (companySizeValue === "") {
+        alert("Please select company size");
+        isValid = false;
+    }
+
+    if (phoneValue === "") {
+        alert("Phone number is required");
+        isValid = false;
+    }
+
+    if (messageValue === "") {
+        alert("Message is required");
+        isValid = false;
+    }
+
+    // 7. SUCCESS CASE
+    if (isValid) {
+        alert("Demo request submitted successfully! We will contact you soon.");
+
+        // reset form
+        fullNameInput.value = "";
+        emailInput.value = "";
+        companyNameInput.value = "";
+        companySizeInput.value = "";
+        phoneInput.value = "";
+        messageInput.value = "";
+    }
+});
+	</script>
+
     
+
+
   </body>
 </html>
