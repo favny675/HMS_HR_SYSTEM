@@ -1102,80 +1102,81 @@ Request Demo
 
 
     <script>
+		console.log("Form ready");
      // 1. GET ELEMENTS
-let fullNameInput = document.getElementById("full-name");
-let emailInput = document.getElementById("business-email");
-let companyNameInput = document.getElementById("company-name");
-let companySizeInput = document.getElementById("company-size");
-let phoneInput = document.getElementById("phone-number");
-let messageInput = document.getElementById("message");
-let submitBtn = document.getElementById("button");
+//let fullNameInput = document.getElementById("full-name");
+//let emailInput = document.getElementById("business-email");
+//let companyNameInput = document.getElementById("company-name");
+//let companySizeInput = document.getElementById("company-size");
+//let phoneInput = document.getElementById("phone-number");
+//let messageInput = document.getElementById("message");
+//let submitBtn = document.getElementById("button");
 
 // 2. CLICK EVENT
-submitBtn.addEventListener("click", function (event) {
-    event.preventDefault();
+//submitBtn.addEventListener("click", function (event) {
+   // event.preventDefault();
 
     // 3. GET VALUES
-    let fullNameValue = fullNameInput.value.trim();
-    let emailValue = emailInput.value.trim();
-    let companyNameValue = companyNameInput.value.trim();
-    let companySizeValue = companySizeInput.value;
-    let phoneValue = phoneInput.value.trim();
-    let messageValue = messageInput.value.trim();
+   // let fullNameValue = fullNameInput.value.trim();
+    // let emailValue = emailInput.value.trim();
+    // let companyNameValue = companyNameInput.value.trim();
+    // let companySizeValue = companySizeInput.value;
+    // let phoneValue = phoneInput.value.trim();
+    // let messageValue = messageInput.value.trim();
 
     // 4. VALIDATION FLAG
-    let isValid = true;
+    // let isValid = true;
 
     // 5. CLEAR OLD ERRORS (optional but good practice)
     // (you can add error divs later if you want)
 
     // 6. VALIDATION RULES
-    if (fullNameValue === "") {
+    //if (fullNameValue === "") {
         // alert("Full name is required");
-        isValid = false;
-    }
+    //     isValid = false;
+    // }
 
-    if (emailValue === "") {
-        // alert("Email is required");
-        isValid = false;
-    }
+    // if (emailValue === "") {
+    //     // alert("Email is required");
+    //     isValid = false;
+    // }
 
-    if (companyNameValue === "") {
-        // alert("Company name is required");
-        isValid = false;
-    }
+//     if (companyNameValue === "") {
+//         // alert("Company name is required");
+//         isValid = false;
+//     }
 
-    if (companySizeValue === "") {
-        // alert("Please select company size");
-        isValid = false;
-    }
+//     if (companySizeValue === "") {
+//         // alert("Please select company size");
+//         isValid = false;
+//     }
 
-    if (phoneValue === "") {
-        // alert("Phone number is required");
-        isValid = false;
-    }
+//     if (phoneValue === "") {
+//         // alert("Phone number is required");
+//         isValid = false;
+//     }
 
-    if (messageValue === "") {
-        // alert("Message is required");
-        isValid = false;
-    }
+//     if (messageValue === "") {
+//         // alert("Message is required");
+//         isValid = false;
+//     }
 
-    // 7. SUCCESS CASE
-    if (isValid) {
-        alert("Demo request submitted successfully! We will contact you soon.");
+//     // 7. SUCCESS CASE
+//     if (isValid) {
+//         alert("Demo request submitted successfully! We will contact you soon.");
 		
 
-        // reset form
-        fullNameInput.value = "";
-        emailInput.value = "";
-        companyNameInput.value = "";
-        companySizeInput.value = "";
-        phoneInput.value = "";
-        messageInput.value = "";
-    }else {
-		alert("Please fill in all required fields.");
-	}
-});
+//         // reset form
+//         fullNameInput.value = "";
+//         emailInput.value = "";
+//         companyNameInput.value = "";
+//         companySizeInput.value = "";
+//         phoneInput.value = "";
+//         messageInput.value = "";
+//     }else {
+// 		alert("Please fill in all required fields.");
+// 	}
+// });
 	</script>
 
     
