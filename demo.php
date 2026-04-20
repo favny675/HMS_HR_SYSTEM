@@ -205,7 +205,7 @@ Request a free demo today.
 
 <div class="col-md-8 col-md-offset-2">
 
-<form class="demo-form">
+<form class="demo-form"  action="submit.php" method="POST">
 
 <div class="form-group">
 <label>Full Name</label>
