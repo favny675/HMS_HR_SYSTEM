@@ -1102,6 +1102,7 @@ Request Demo
 
 
     <script>
+		console.log("Form ready");
      // 1. GET ELEMENTS
 let fullNameInput = document.getElementById("full-name");
 let emailInput = document.getElementById("business-email");
@@ -1117,37 +1118,37 @@ submitBtn.addEventListener("click", function (event) {
 
     // 3. GET VALUES
     let fullNameValue = fullNameInput.value.trim();
-    let emailValue = emailInput.value.trim();
+     let emailValue = emailInput.value.trim();
     let companyNameValue = companyNameInput.value.trim();
-    let companySizeValue = companySizeInput.value;
-    let phoneValue = phoneInput.value.trim();
-    let messageValue = messageInput.value.trim();
+     let companySizeValue = companySizeInput.value;
+     let phoneValue = phoneInput.value.trim();
+     let messageValue = messageInput.value.trim();
 
     // 4. VALIDATION FLAG
-    let isValid = true;
+     let isValid = true;
 
     // 5. CLEAR OLD ERRORS (optional but good practice)
     // (you can add error divs later if you want)
 
-    // 6. VALIDATION RULES
+    //  6. VALIDATION RULES
     if (fullNameValue === "") {
-        // alert("Full name is required");
+        //  alert("Full name is required");
         isValid = false;
-    }
+     }
 
-    if (emailValue === "") {
+     if (emailValue === "") {
         // alert("Email is required");
         isValid = false;
     }
 
     if (companyNameValue === "") {
-        // alert("Company name is required");
-        isValid = false;
-    }
+//         // alert("Company name is required");
+      isValid = false;
+   }
 
     if (companySizeValue === "") {
-        // alert("Please select company size");
-        isValid = false;
+       // alert("Please select company size");
+       isValid = false;
     }
 
     if (phoneValue === "") {
@@ -1155,23 +1156,23 @@ submitBtn.addEventListener("click", function (event) {
         isValid = false;
     }
 
-    if (messageValue === "") {
-        // alert("Message is required");
+     if (messageValue === "") {
+         // alert("Message is required");
         isValid = false;
-    }
+	} 
 
-    // 7. SUCCESS CASE
-    if (isValid) {
+   // 7. SUCCESS CASE
+     if (isValid) {
         alert("Demo request submitted successfully! We will contact you soon.");
 		
 
-        // reset form
-        fullNameInput.value = "";
-        emailInput.value = "";
-        companyNameInput.value = "";
-        companySizeInput.value = "";
-        phoneInput.value = "";
-        messageInput.value = "";
+         // reset form
+         fullNameInput.value = "";
+         emailInput.value = "";
+         companyNameInput.value = "";
+         companySizeInput.value = "";
+         phoneInput.value = "";
+         messageInput.value = "";
     }else {
 		alert("Please fill in all required fields.");
 	}
