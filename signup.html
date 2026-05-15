@@ -166,7 +166,7 @@ track attendance, and streamline HR operations.
 </div>
 
 <div class="text-center">
-<button type="submit" id="boton" class="btn btn-primary btn-block">
+<button type="submit" id="button" class="btn btn-primary btn-block">
 Sign Up
 </button>
 </div>
@@ -1086,83 +1086,7 @@ Already have an account?
 
 
      
-    <script>
-		console.log("Form ready");
-     // 1. GET ELEMENTS
-let $nameInput = document.getElementById("fullname");
-let emailInput = document.getElementById("email");
-let companyInput = document.getElementById("com_name");
-let password = document.getElementById("pass");
-let comPass = document.getElementById("con_pass");
-let submitbtn = document.getElementById("Boton");
-
-// 2. CLICK EVENT
-submitbtn.addEventListener("click", function (event) {
-    event.preventDefault();
-
-    // 3. GET VALUES
-    let fullNameValue = nameInput.value.trim();
-     let emailValue = emailInput.value.trim();
-    let companyValue = companyInput.value.trim();
-     let passwordValue = passwordInput.value;
-     let comPassValue = comPassInput.value.trim();
-    //  let messageValue = messageInput.value.trim();
-
-    // 4. VALIDATION FLAG
-     let isValid = true;
-
-    // 5. CLEAR OLD ERRORS (optional but good practice)
-    // (you can add error divs later if you want)
-
-    //  6. VALIDATION RULES
-    if (fullNameValue === "") {
-        //  alert("Full name is required");
-        isValid = false;
-     }
-
-     if (emailValue === "") {
-        // alert("Email is required");
-        isValid = false;
-    }
-
-    if (companyValue === "") {
-//         // alert("Company name is required");
-      isValid = false;
-   }
-
-    if (passwordValue === "") {
-       // alert("Please select company size");
-       isValid = false;
-    }
-
-    if (comPassValue === "") {
-        // alert("Phone number is required");
-        isValid = false;
-    }
-
-    //  if (messageValue === "") {
-    //      // alert("Message is required");
-    //     isValid = false;
-	// } 
-
-   // 7. SUCCESS CASE
-     if (isValid) {
-        alert("Demo request submitted successfully! We will contact you soon.");
-		
-
-         // reset form
-         nameInput.value = "";
-         emailInput.value = "";
-         companyInput.value = "";
-         passwordInput.value = "";
-         comPassInput.value = "";
-        //  messageInput.value = "";
-    }else {
-		alert("Please fill in all required fields.");
-	}
-});
-	</script>
-
+    
     
   </body>
 </html>
