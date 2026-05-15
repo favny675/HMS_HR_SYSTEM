@@ -1,5 +1,5 @@
 <?php 
-$name = $_POST['name'];
+$name = $_POST['fullname'];
 $email = $_POST['email'];
 $company = $_POST['com_name'];
 $password = $_POST['pass'];
